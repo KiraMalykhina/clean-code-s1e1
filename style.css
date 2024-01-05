@@ -1,5 +1,5 @@
 /* Basic Style */
-body {
+.body {
   background-color: #f8f8f8;
   color: #333;
   font-family: Lato, sans-serif;
@@ -27,7 +27,7 @@ body {
   width: 500px;
   margin: 0 auto 0;
 }
-.task,
+.input-text,
 .item__label {
   width: 56%;
   display: inline-block;
@@ -40,11 +40,12 @@ ul {
   margin: 0;
   padding: 0px;
 }
-li,
-h3 {
+.item,
+.title {
   list-style: none;
 }
-input,
+.item__input-checkbox,
+.input-text,
 .button {
   outline: none;
 }
@@ -61,7 +62,7 @@ input,
   color: #3a3a3a;
 }
 /* Heading */
-h3,
+.title,
 .add-task__label {
   color: #333;
   font-weight: 700;
@@ -71,7 +72,7 @@ h3,
   margin: 0;
   text-transform: uppercase;
 }
-input[type="text"] {
+.input-text {
   margin: 0;
   font-size: 18px;
   line-height: 18px;
@@ -83,7 +84,7 @@ input[type="text"] {
   font-family: Lato, sans-serif;
   color: #888;
 }
-input[type="text"]:focus {
+.input-text:focus {
   color: #333;
 }
 
@@ -92,12 +93,12 @@ input[type="text"]:focus {
   display: block;
   margin: 0 0 20px;
 }
-input#new-task {
+.input-text#new-task {
   width: 318px;
 }
 
 /* Task list */
-li {
+.item {
   overflow: hidden;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
@@ -106,7 +107,7 @@ li {
   justify-content: space-between;
   align-items: center;
 }
-li > * {
+.item > * {
   vertical-align: middle;
 }
 .item__input-checkbox {
@@ -118,36 +119,36 @@ li > * {
   font-size: 18px;
   width: 226px;
 }
-li > input[type="text"] {
+.item > .input-text {
   width: 226px;
 }
-.button.item__delete img {
+.item__img-delete {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
-.button.item__delete img:hover {
+.item__img-delete:hover {
   transform: rotateZ(0);
 }
 
 /* Completed */
-ul#completed-tasks label {
+#completed-tasks .item__label {
   text-decoration: line-through;
   color: #888;
 }
 
 /* Edit Task */
-ul li input[type="text"] {
+.item .input-text {
   display: none;
 }
 
 /* ul li.editMode input[type="text"] { */
-.item_editMode input[type="text"] {
+.item_editMode .input-text {
   display: inline-block;
   width: 224px;
 }
 
 /* ul li.editMode label { */
-.item_editMode label {
+.item_editMode .item__label {
   display: none;
 }
