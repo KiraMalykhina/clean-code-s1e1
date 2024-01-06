@@ -16,6 +16,9 @@
 .header__info {
   font-family: fantasy, cursive;
 }
+.hidden-header {
+  display: none;
+}
 
 @media (max-width:768px) {
   .header {
@@ -36,6 +39,7 @@
 .add-task__wrapper {
   display: flex;
 }
+/* intentionally resetting the default styles */
 ul {
   margin: 0;
   padding: 0px;
